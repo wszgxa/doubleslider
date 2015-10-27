@@ -1,0 +1,11 @@
+{
+  "name": "doubleslider",
+  "version": "1.0.0",
+  "description": "a  zepto plugin",
+  "main": "doubleSlider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
