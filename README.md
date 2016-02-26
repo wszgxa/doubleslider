@@ -2,8 +2,10 @@
 
 ![](http://7fvhwe.com1.z0.glb.clouddn.com/选区_069.png)
 
-双指滑动触发事件。
 
+双指滑动触发事件。
+## 使用
+首先需要引用
 调用方式：
 ```js
 var target = $('.tar');
@@ -14,3 +16,4 @@ var target = $('.tar');
 		}
 	})
 ```
+## 例子
