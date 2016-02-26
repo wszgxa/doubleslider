@@ -2,22 +2,23 @@
     if (typeof $ === 'undefined') {
         throw new Error('zepto.fullpage\'s script requires Zepto');
     }
-    var doubleSlider = null;
-    var d = {
-        x1: null,
-        x2: null,
-        xm1: null,
-        xm2: null,
-        dis: 30, //默认x轴滑动距离30
-        back: function() {
-            alert('back函数没传入!');
-        }
-    };
+    var doubleSlider = null,
+        d = {
+            x1: null,
+            x2: null,
+            xm1: null,
+            xm2: null,
+            dis: 30, //默认x轴滑动距离30
+            back: function() {
+                alert('back函数没传入!');
+            }
+        };
 
     function DoubleSlider($this, option) {
         this.$this = $this;
         this.init.call(this, option);
     }
+
     $.extend(DoubleSlider.prototype, {
         init: function(option) {
             var o = $.extend(true, {}, d, option);
@@ -44,7 +45,6 @@
                     }
                 }
             });
-
         }
     });
     $.fn.doubleSlider = function(option) {
@@ -53,5 +53,5 @@
         }
         return this;
     };
-    $.fn.doubleSlider.version = '0.0.1';
+    $.fn.doubleSlider.version = '0.0.2';
 }(window, Zepto));
