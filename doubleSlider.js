@@ -55,11 +55,3 @@
     };
     $.fn.doubleSlider.version = '0.0.1';
 }(window, Zepto));
-
-var target = $('.tar');
-target.doubleSlider({
-    dis: 10,
-    back: function() {
-        alert('你好～');
-    }
-})

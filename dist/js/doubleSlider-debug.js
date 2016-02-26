@@ -12,7 +12,7 @@
         back: function() {
             alert('back函数没传入!');
         }
-    }
+    };
 
     function DoubleSlider($this, option) {
         this.$this = $this;
@@ -35,13 +35,13 @@
             targetElement.on('touchmove', function(e) {
                 that.o.xm1 = e.targetTouches[0].pageX;
                 that.o.xm2 = e.targetTouches[1] ? e.targetTouches[1].pageX : null;
-                if (that.o.xm2 != null) { // 判断是否是两个手指
+                if (that.o.xm2 !== null) { // 判断是否是两个手指
                     var d = Math.abs(that.o.xm1 - that.o.x1) + Math.abs(that.o.x2 - that.o.xm2);
                     if (d > that.o.dis) {
                         that.o.back();
                     } else {
                         that.o.x2 = null;
-                    };
+                    }
                 }
             });
 
@@ -50,7 +50,7 @@
     $.fn.doubleSlider = function(option) {
         if (!doubleSlider) {
             doubleSlider = new DoubleSlider($(this), option);
-        };
+        }
         return this;
     };
     $.fn.doubleSlider.version = '0.0.1';
