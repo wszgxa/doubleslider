@@ -1,24 +1,29 @@
 // variable
-@bg: #494949;
-@tg-bg: #a86161;
+@bg: #f4f4f4;
+@tg-bg: #8acc85;
 
 html,
 body {
     height: 100%;
     margin: 0px;
     width: 100%;
+    background-color: @bg;
 }
 
+.tar-wrap {
+    padding-top: 200px;
+}
 
 .tar {
     position: relative;
     margin: 0 auto;
-    margin-top: 200px;
-    width: 100px;
-    height: 100px;
-    line-height: 100%;
+    font-size: 150px;
+    width: 150px;
+    height: 150px;
     background-color: @tg-bg;
     transition: all 1s;
+    perspective: 500;
+    -webkit-perspective: 500; /* Safari 和 Chrome */
 }
 .text-wrap{
     margin: 0 auto;
@@ -28,12 +33,23 @@ body {
 
 .tar-after {
     // 硬件加速
-    transform: scale3d(3, 3, 3) rotate3d(1,1,0,360deg);
-    -webkit-transform: scale3d(2, 2, 2) rotate3d(1,1,0,360deg);
+    transform: scale3d(2.5, 2.5, 2.5) rotate3d(1,1,0,360deg);
+    -webkit-transform: scale3d(2.5, 2.5, 2.5) rotate3d(1,1,0,360deg);
+    // 兼容320小屏
+    @media (max-width: 320px) {
+        transform: scale3d(2, 2, 2) rotate3d(1,1,0,360deg);
+        -webkit-transform: scale3d(2, 2, 2) rotate3d(1,1,0,360deg);
+    }
 }
 
 .text-hide {
     opacity: 0;
-    transform: translate3d(0px, 75px, 0);
-    -webkit-transform: translate3d(0px, 75px, 0);
+    transform: translate3d(0px, 90px, 0);
+    -webkit-transform: translate3d(0px, 90px, 0);
+    @media (max-width: 320px) {
+        transform: translate3d(0px, 75px, 0);
+        -webkit-transform: translate3d(0px, 75px, 0);
+    }
 }
+
+
