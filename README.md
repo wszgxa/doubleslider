@@ -20,3 +20,6 @@ var target = $('.tar');//双指滑动目标
 	})
 ```
 ## 例子
+扫描二维码：
+
+![](http://7fvhwe.com1.z0.glb.clouddn.com/qr.png)
