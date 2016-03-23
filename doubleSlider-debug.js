@@ -1,6 +1,6 @@
 (function(win, $) {
     if (typeof $ === 'undefined') {
-        throw new Error('zepto.fullpage\'s script requires Zepto');
+        throw new Error('zepto.doubleSlider\'s script requires Zepto');
     }
     var doubleSlider = null,
         d = {
